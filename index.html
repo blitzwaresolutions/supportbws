@@ -1,74 +1,71 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Support the Mission</title>
-  <style
+  <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-image: url('/storage/8E9A-F9C7/01 My Office/Computer/Development/BlitzWeather/BlitzWeather Support/BWSupport.png');
+      font-family: 'Roboto', sans-serif;
+      background: url('img/BWSbk.png') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      color: white;
+      background-color: #000; /* fallback */
+      color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-    }.overlay {
-  background-color: rgba(0, 0, 0, 0.65);
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  max-width: 90%;
-}
+      text-align: center;
+    }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.65);
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 90%;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    }
 
-p.subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
 
-.button {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.9rem 1.5rem;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #222;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+    p.subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
 
-.button:hover {
-  background-color: #444;
-}
+    .button {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.9rem 1.5rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #222;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
-.qr-code {
-  margin-top: 1rem;
-  max-width: 120px;
-}
+    .button:hover {
+      background-color: #444;
+    }
 
-.footer {
-  font-size: 1rem;
-  margin-top: 1.5rem;
-}
-body {
-        background: url('img/BWSbk.png') no-repeat center center fixed;
-        background-size: cover;
-        background-color: #000; /* fallback if image fails */
-        color: #fff;
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-        text-align: center;
+    .qr-code {
+      margin-top: 1rem;
+      max-width: 140px;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+    }
+
+    .footer {
+      font-size: 1rem;
+      margin-top: 1.5rem;
     }
   </style>
 </head>
@@ -76,11 +73,17 @@ body {
   <div class="overlay">
     <h1>SUPPORT THE MISSION</h1>
     <p class="subtitle">BlitzWeather AI: Built by survivors, for survivors</p>
+
+    <!-- Buttons -->
     <a href="https://coff.ee/blitzwaresolutions" class="button">☕ Buy Us a Coffee</a>
     <a href="#" class="button">🔔 Get Early Access Alerts</a>
+
+    <!-- QR Code -->
     <div>
-      <img class="qr-code" src="/storage/8E9A-F9C7/01 My Office/Computer/Development/BlitzWeather/BlitzWeather Support/BWSupportQR.png" alt="Partner QR Code">
+      <img class="qr-code" src="img/BWSupportQR.png" alt="Partner QR Code">
     </div>
+
+    <!-- Footer -->
     <div class="footer">
       Help us get there first.<br>
       <em>Your coffee might just save a town.</em>
