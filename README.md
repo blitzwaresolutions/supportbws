@@ -1,2 +1,2 @@
 # supportbws
-Supoport BWS buymeacoffee
+Supoport BWS buymeacoffee.com/blitzwaresolutions
