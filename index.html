@@ -1,92 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solutions - BlitzWare Solutions</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support the Mission</title>
+  <style>
+    /* Reset / Base */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* keep full viewport height */
+      background: #000; /* fallback if video can’t load */
+      text-align: center;
+    }
+
+    /* Fullscreen background video */
+    .bg-video {
+      position: fixed;
+      inset: 0;               /* top:0; right:0; bottom:0; left:0 */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;      /* fill the entire screen like the image did */
+      z-index: -1;            /* keep behind overlay content */
+      filter: brightness(0.55); /* darken slightly for readability */
+      background: #000;       /* safety fallback color while buffering */
+    }
+
+    /* Overlay card */
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.65);
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 90%;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p.subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.9rem 1.5rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #222;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #444;
+    }
+
+    .qr-code {
+      margin-top: 1rem;
+      max-width: 120px;
+    }
+
+    .footer {
+      font-size: 1rem;
+      margin-top: 1.5rem;
+    }
+  </style>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="header">
-    <!-- Back Button -->
-    <button class="back-button" onclick="window.history.back()" aria-label="Go Back">
-      <i class="fas fa-arrow-left"></i>
-    </button>
 
-    <!-- Hamburger Menu -->
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
+  <!-- Fullscreen video background -->
+  <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="">
+    <source src="bwssupp01.mp4" type="video/mp4">
+    <!-- Fallback text if no video support -->
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="overlay">
+    <h1>SUPPORT THE MISSION</h1>
+    <p class="subtitle">BlitzWeather AI: Built by survivors, for survivors</p>
+
+    <a href="https://coff.ee/blitzwaresolutions" class="button" target="_blank" rel="noopener">
+      ☕ Buy Us a Coffee
+    </a>
+
+    <div>
+      <img class="qr-code" src="/storage/8E9A-F9C7/01 My Office/Computer/Development/BlitzWeather/BlitzWeather Support/BWSupportQR.png" alt="Partner QR Code">
     </div>
 
-    <!-- Animated Logo -->
-    <video autoplay muted loop playsinline class="logo-video" style="max-width: 180px; margin: 20px auto; display: block;">
-      <source src="img/bwssupp01.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <!-- Menu Panel -->
-    <nav id="menu-panel" class="menu-panel">
-      <a href="index.html">Home</a>
-      <a href="mission.html">Mission</a>
-      <a href="roadmap.html">Roadmap</a>
-      <a href="updates.html">Dev Updates</a>
-      <a href="support.html">Support</a>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </nav>
-  </header>
-
-  <!-- CONTENT -->
-  <div class="content">
-    <h1>Explore Our Tailored Solutions</h1>
-    <p>Comprehensive IT & Cybersecurity Services</p>
-
-    <div class="solution-box">
-      <h3>Network Security & Monitoring</h3>
-      <p>24/7 proactive threat detection and network monitoring to keep your business secure.</p>
-    </div>
-    <div class="solution-box">
-      <h3>Incident Response & Recovery</h3>
-      <p>Lightning-fast incident response to mitigate damage and ensure a full recovery.</p>
-    </div>
-    <div class="solution-box">
-      <h3>Custom AI Integration</h3>
-      <p>Leverage the power of AI to enhance your business operations and security protocols.</p>
-    </div>
-    <div class="solution-box">
-      <h3>Penetration Testing</h3>
-      <p>In-depth testing to identify vulnerabilities before malicious actors can exploit them.</p>
+    <div class="footer">
+      Help us get there first.<br>
+      <em>Your coffee might just save a town.</em>
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>
-      <a href="mailto:blitzwaresolutions@gmail.com">
-        <i class="fas fa-envelope"></i> Email Us
-      </a>
-    </p>
-    <p class="tagline">
-      <i>Providing Professional IT Services Since 2003</i>
-    </p>
-    <p class="copy">&copy; 2025 BlitzWare Solutions. All rights reserved.</p>
-    <p class="legal">
-      <a href="privacy.html">Privacy Policy</a> |
-      <a href="terms.html">Terms of Service</a>
-    </p>
-  </footer>
-
-  <!-- JS -->
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu-panel");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
-    }
-  </script>
+  <noscript>
+    <style>.bg-video{display:none}</style>
+  </noscript>
 </body>
 </html>
