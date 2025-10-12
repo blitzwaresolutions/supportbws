@@ -5,34 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Support the Mission</title>
   <style>
-    /* Reset / Base */
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: white;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh; /* keep full viewport height */
-      background: #000; /* fallback if video can’t load */
-      text-align: center;
+      color: white;
+      overflow: hidden;
     }
 
     /* Fullscreen background video */
     .bg-video {
       position: fixed;
-      inset: 0;               /* top:0; right:0; bottom:0; left:0 */
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;      /* fill the entire screen like the image did */
-      z-index: -1;            /* keep behind overlay content */
-      filter: brightness(0.55); /* darken slightly for readability */
-      background: #000;       /* safety fallback color while buffering */
+      object-fit: cover;
+      z-index: -1;
     }
 
-    /* Overlay card */
     .overlay {
       background-color: rgba(0, 0, 0, 0.65);
       padding: 2rem;
@@ -81,34 +75,23 @@
   </style>
 </head>
 <body>
-
-  <!-- Fullscreen video background -->
-  <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="">
-    <source src="bwssupp01.mp4" type="video/mp4">
-    <!-- Fallback text if no video support -->
+  <!-- Background video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="img/bwssupp01.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <div class="overlay">
     <h1>SUPPORT THE MISSION</h1>
     <p class="subtitle">BlitzWeather AI: Built by survivors, for survivors</p>
-
-    <a href="https://coff.ee/blitzwaresolutions" class="button" target="_blank" rel="noopener">
-      ☕ Buy Us a Coffee
-    </a>
-
+    <a href="https://coff.ee/blitzwaresolutions" class="button">☕ Buy Us a Coffee</a>
     <div>
-      <img class="qr-code" src="/storage/8E9A-F9C7/01 My Office/Computer/Development/BlitzWeather/BlitzWeather Support/BWSupportQR.png" alt="Partner QR Code">
+      <img class="qr-code" src="img/BWSupportQR.png" alt="Partner QR Code">
     </div>
-
     <div class="footer">
       Help us get there first.<br>
       <em>Your coffee might just save a town.</em>
     </div>
   </div>
-
-  <noscript>
-    <style>.bg-video{display:none}</style>
-  </noscript>
 </body>
 </html>
