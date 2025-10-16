@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,15 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Support the Mission</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: Arial, sans-serif;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       color: white;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     /* Fullscreen background video */
@@ -27,27 +26,41 @@
       z-index: -1;
     }
 
+    /* Scrollable transparent content box */
     .overlay {
-      background-color: rgba(0, 0, 0, 0.65);
+      background-color: rgba(0, 0, 0, 0.6);
+      max-width: 800px;
+      margin: 0 auto;
       padding: 2rem;
       border-radius: 12px;
       text-align: center;
-      max-width: 90%;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .content-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 3rem 1rem;
+      box-sizing: border-box;
     }
 
     h1 {
       font-size: 2rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
 
-    p.subtitle {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
+    p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
     }
 
     .button {
       display: inline-block;
-      margin: 0.5rem;
+      margin: 1rem 0;
       padding: 0.9rem 1.5rem;
       font-size: 1rem;
       color: #fff;
@@ -65,43 +78,50 @@
 
     .qr-code {
       margin-top: 1rem;
-      max-width: 120px;
+      max-width: 140px;
     }
 
     .footer {
-      font-size: 1rem;
+      font-size: 0.95rem;
       margin-top: 1.5rem;
+      opacity: 0.85;
     }
   </style>
 </head>
 <body>
+
   <!-- Background video -->
   <video autoplay muted loop playsinline class="bg-video">
     <source src="img/bwssupp01.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-  <div class="overlay">
-<br><br>
-    <h1>SUPPORT THE MISSION ☕️</h1>
+  <div class="content-wrapper">
+    <div class="overlay">
+      <h1>SUPPORT THE MISSION ☕️</h1>
 
-<p>At BlitzWare Solutions, we’re putting traditional jobs on hold to build life-saving tech that actually works when it matters most. We're developing BlitzWeather AI, a next-gen early warning system designed to detect severe weather threats—faster than the National Weather Service and way before the sirens (if they even sound at all).</p>
+      <p>At BlitzWare Solutions, we’re putting traditional jobs on hold to build life-saving tech that actually works when it matters most. We're developing BlitzWeather AI, a next-gen early warning system designed to detect severe weather threats—faster than the National Weather Service and way before the sirens (if they even sound at all).</p>
 
-<p>Your cup of coffee funds critical upgrades, cloud infrastructure, field testing, and real-time alert systems—bringing faster warnings to people everywhere, not just the flood zones.</p>
+      <p>Your cup of coffee funds critical upgrades, cloud infrastructure, field testing, and real-time alert systems—bringing faster warnings to people everywhere, not just the flood zones.</p>
 
-<p>Support now. Help us beat the storm.</p>
+      <p>Support now. Help us beat the storm.</p>
 
-<p>Because next time, "there was no warning" shouldn't be the last thing someone says.</p>
+      <p>Because next time, "there was no warning" shouldn't be the last thing someone says.</p>
 
-<p>BlitzWeather AI: Built by survivors, for survivors.</p>
-    <a href="https://coff.ee/blitzwaresolutions" class="button">☕ Buy Us a Coffee</a>
-    <div>
-      <img class="qr-code" src="img/BWSupportQR.png" alt="Partner QR Code">
-    </div>
-    <div class="footer">
-      Help us get there first.<br>
-      <em>Your coffee might just save a town.</em>
+      <p>BlitzWeather AI: Built by survivors, for survivors.</p>
+
+      <a href="https://coff.ee/blitzwaresolutions" class="button">☕ Buy Us a Coffee</a>
+
+      <div>
+        <img class="qr-code" src="img/BWSupportQR.png" alt="Partner QR Code">
+      </div>
+
+      <div class="footer">
+        Help us get there first.<br>
+        <em>Your coffee might just save a town.</em>
+      </div>
     </div>
   </div>
+
 </body>
 </html>
